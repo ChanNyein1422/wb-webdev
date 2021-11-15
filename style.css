@@ -1,0 +1,237 @@
+/* --------- Defaults --------- */
+
+html {
+  font-family: monospace;
+}
+
+nav,
+header,
+footer {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  margin: 0; /* to stuck everything edge to edge */
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+* {
+  box-sizing: border-box;
+}
+label {
+  font-size: 30px;
+  font-weight: 700;
+}
+p {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.row::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+/* --------- Navbar --------- */
+
+nav {
+  width: 100%; /* to get full screen view */
+  margin: 0;
+}
+nav ul {
+  background-color: #eee;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+ul.topnav li {
+  list-style: none;
+  float: left;
+}
+ul.topnav li.topnav-right {
+  float: right;
+}
+ul.topnav li a {
+  display: block;
+  text-decoration: none;
+  min-height: 16px; /* to maintain min font size when narrowed because nav is important*/
+  text-align: center;
+  padding: 14px;
+  text-transform: uppercase;
+  color: #666;
+}
+ul.topnav li a:hover {
+  background-color: blue;
+  color: white;
+}
+ul.topnav li.dropdownIcon {
+  display: none;
+}
+
+div.leftside-col {
+  margin-left: 30%;
+}
+div.rightside-col {
+  margin-left: 15%;
+}
+h1.large {
+  color: white;
+  font-size: 40px;
+  margin: 0;
+  line-height: 50px;
+}
+
+form h2 {
+  color: white;
+}
+input[type="text"] {
+  font-size: 20px;
+  width: 400px;
+  min-width: 100px;
+  border-radius: 7px;
+}
+h1.sec2Header {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+div.box {
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  margin: 24px;
+  padding: 24px 24px 24px 24px;
+  border-radius: 7px;
+}
+div.devIcon {
+  width: 100%;
+}
+img.boxImage {
+  width: 100px;
+  height: 100px;
+}
+button {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #0069ff;
+  padding: 15px 50px;
+  display: block;
+  margin: 5px;
+  text-align: center;
+  border-radius: 7px;
+  border: none;
+}
+button.learnMoreButton {
+  display: block;
+  margin: auto;
+}
+/*----------------- Custom Styles ------------------*/
+#section-1-gradient {
+  background: #076dff;
+  background: -webkit-linear-gradient(#076dff, #65a5ff);
+  background: -o-linear-gradient(#076dff, #65a5ff);
+  background: -moz-linear-gradient(#076dff, #65a5ff);
+  background: linear-gradient(#076dff, #65a5ff);
+}
+
+/* class for css ----- id for javascript -----*/
+/*--------- mobile --------- go one section at a time */
+@media screen and (max-width: 680px) {
+  ul.topnav li:not(:nth-child(1)) {
+    display: none;
+  }
+  ul.topnav li.dropdownIcon {
+    display: block;
+    float: right;
+  }
+  ul.topnav.responsive li.dropdownIcon {
+    position: absolute; /* to stay in same position after list dropped down*/
+    top: 0;
+    right: 0;
+  }
+  ul.topnav.responsive {
+    position: relative;
+  }
+  ul.topnav.responsive li {
+    display: inline;
+    float: none;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+  h1.sec2Header {
+    font-size: 35px;
+  }
+  .col-6,
+  .col-4 {
+    width: 100%;
+    margin: 0;
+  }
+  div.box {
+    padding: 10px;
+    display: block;
+  }
+
+  div.leftside-col,
+  div.rightside-col {
+    margin: 15px;
+    overflow: hidden;
+  }
+
+  div.videoContainer iframe {
+    position: relative;
+    width: 100%;
+    margin: 0;
+  }
+}
