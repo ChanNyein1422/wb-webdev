@@ -34,7 +34,7 @@ p {
 }
 
 article p {
-  font-size: 20px;
+  font-size: 18px;
   padding: 30px;
 }
 
@@ -125,7 +125,8 @@ div.leftside-col {
   margin-left: 30%;
 }
 div.rightside-col {
-  margin-left: 15%;
+  margin-left: 10%;
+  overflow: hidden;
 }
 h1.large {
   color: white;
@@ -187,6 +188,24 @@ div.techPic img {
     2px 2px 23px 1px rgba(0, 0, 0, 1);
 }
 
+footer.foot {
+  width: 100%;
+  display: block;
+  background-color: #666;
+  padding-left: 10%;
+}
+footer.foot h1 {
+  color: #fff;
+  font-size: 20px;
+}
+footer.foot ul {
+  color: #fff;
+  list-style: none;
+  text-align: left;
+  padding-left: 0;
+  line-height: 1.5;
+}
+
 /*----------------- Custom Styles ------------------*/
 #section-1-gradient {
   background: #076dff;
@@ -198,7 +217,7 @@ div.techPic img {
 
 /* class for css ----- id for javascript -----*/
 /*--------- mobile --------- go one section at a time */
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 800px) {
   ul.topnav li:not(:nth-child(1)) {
     display: none;
   }
@@ -226,15 +245,17 @@ div.techPic img {
     font-size: 35px;
   }
 
-  article p {
-    font-size: 18px;
-  }
   .col-6,
   .col-4,
   .col-7,
   .col-5 {
     width: 100%;
     margin: 0;
+  }
+
+  div.mobilestack {
+    width: 50%;
+    display: block;
   }
   div.box {
     padding: 10px;
